@@ -1,0 +1,22 @@
+{
+	"version": "2.0.0",
+	"windows": {
+		"options": {
+			"shell": {
+				"executable": "cmd.exe",
+				"args": [
+					"/d",
+					"/c"
+				]
+			}
+		}
+	},
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "CMake: 生成",
+			"command": "rd /s /q build && mkdir build && cd build && emcmake cmake -G Ninja .. && cmake --build .",
+			"problemMatcher": []
+		}
+	]
+}
